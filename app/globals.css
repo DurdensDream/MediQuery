@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  @apply bg-jungle-50 text-slate-900 font-body antialiased;
+}
+
+.dark body {
+  @apply bg-canopy-700 text-slate-100;
+}
+
+.jungle-glow {
+  box-shadow: 0 0 30px rgba(34, 139, 34, 0.35);
+}
+
+.vine-border {
+  border-image: linear-gradient(90deg, #1b6f1b, #9c7f4c) 1;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.jungle-card {
+  @apply bg-white/90 dark:bg-canopy-500/70 backdrop-blur border border-emerald-900/20 rounded-2xl shadow-vine;
+}
+
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-sway,
+  .animate-float {
+    animation: none !important;
+  }
+}

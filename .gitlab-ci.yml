@@ -1,0 +1,26 @@
+stages:
+  - install
+  - test
+  - build
+
+cache:
+  paths:
+    - node_modules/
+
+install:
+  stage: install
+  image: node:20
+  script:
+    - npm install
+
+unit_tests:
+  stage: test
+  image: node:20
+  script:
+    - npm run test
+
+build:
+  stage: build
+  image: node:20
+  script:
+    - npm run build
